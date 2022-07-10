@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <%- include('./partials/head') %>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Detalle de producto</title>
+        <link rel="stylesheet" href="/css/slider.css">
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header-prod') %>
+            <title>Detalle de producto</title>
+    </header>
+
+    <div class="container bootdey">
+        <div class="col-lg-12 mw-100">
+            <section class="panel">
+                <div class="panel-body mt-30">
+                    <div class="col-lg-6">
+                        <div class="pro-img-details fx-rap text-center">
+                            <img style="width: 70%" src="/images/products/<%=producto.imagen%>"
+                                alt="<%=producto.nombre%>">
+                        </div>
+                        <div class="pro-img-list text-center">
+                            <a href="#">
+                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                            </a>
+                            <a href="#">
+                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                            </a>
+                            <a href="#">
+                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                            </a>
+                            <a href="#">
+                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 style="margin-top: 30px" class="pro-d-title"><%=producto.nombre%></h4>
+                        <h4 style="margin-top: 30px">Descripción:</h4>
+                        <div>
+                            <span><%=producto.descripcion%></span></div>
+                        <div class="product_meta" style="margin-bottom: 20px; margin-top: 30px">
+                            <span class="posted_in"> <strong>Categoría:</strong> <a rel="tag" href="#">
+                                    <%=producto.categoria%>
+                                </a></span>
+
+                        </div>
+                        <div class="m-bot15" style="margin-bottom: 20px;"> <strong>Precio: </strong> <span style="text-decoration: line-through" class="tachado">$5434</span> 
+
+                            <span class="pro-price"><strong style="color: green; font-size: 16px;">$ <%=producto.precio%></strong></span>
+                            </div>
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <input type="quantiy" placeholder="1" style="width: 15%; margin-bottom: 20px;" class="form-control quantity">
+                        </div>
+                        <p>
+                            <button class="btn btn-round btn-success"  type="button"><a href="/cart" style="color: black; text-decoration: none;"><i
+                                        class="fa fa-shopping-cart"></i> Agregar al carrito</a></button>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+        <%- include("./slider") %>  
+        </div>
+    <footer>
+        <%- include("./partials/footer-prod") %>
+    </footer>
+</body>
+
+</html>

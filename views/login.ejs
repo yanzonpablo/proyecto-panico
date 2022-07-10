@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('./partials/head') %>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css" />
+    <link href="/css/styles-reg-log.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Inicio Header importado -->
+  <header>
+    <%- include('./partials/header-logo') %>
+  </header>
+  <% if (locals.error) { %>
+    <div style="background-color: red">Tus credenciales están mal</div>
+    <% } %>
+      <main>
+        <form class="container col-md-6" style="margin-top: 20px;" action="/login" method="POST">
+          <div class="row product-detail" style="text-align: center">
+            <div class="form-label" style="margin-left: 20px;">Iniciar sesión</div>
+
+            <!-- <div class="foto-perfil">
+            <img src="/images/perfil2.jpg" alt="perfil" width="100%" />
+            </div> -->
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email:</label>
+              <input class="cajas" type="email" id="email" name="email" placeholder="Email" required maxlength="50" />
+            </div>
+
+            <div class="col-12">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input class="cajas" type="password" name="password" placeholder="Contraseña" required maxlength="30" />
+            </div>
+
+            <div class="col-12 remember"><input type="checkbox" /> Recordarme</div>
+
+            <input type="submit" style="margin-left: auto; margin-right: auto;" class="col-md-6 btn" value="Ingresar" />
+
+            <div class="col-12 tengo-cuenta">
+              <a href="/register" class="tengo-cuenta">¿No tenés cuenta? ¡Creá una!</a>
+            </div>
+            <!-- <div class="col-12 forget">
+              <a href="">¿Olvidaste tu Contraseña?</a>
+            </div> -->
+
+          </div>
+        </form>
+      </main>
+      <!-- Comienzo footer -->
+      <footer>
+        <%- include ('./partials/footer-form') %>
+      </footer>
+</body>
+
+</html>
