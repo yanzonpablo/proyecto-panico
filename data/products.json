@@ -240,16 +240,6 @@
         "descuento": "15"
     },
     {
-        "nombre": "Cafetera",
-        "precio": "12500",
-        "categoria": "Telefonía móvil",
-        "seccion": "destacado",
-        "descuento": "50",
-        "descripcion": "Cafetera chota",
-        "imagen": "product-1656301674208.jpg",
-        "id": 25
-    },
-    {
         "nombre": "sarten",
         "precio": "2",
         "categoria": "Electrodomésticos",

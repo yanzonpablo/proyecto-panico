@@ -111,11 +111,12 @@ h2::after {
 	padding: 2px 0;
 }
 .carousel .item-price strike {
-	color: #999;
+	color: rgb(139, 139, 139);
 	margin-right: 5px;
 }
 .carousel .item-price span {
-	color: #86bd57;
+	color: #050505;
+	font-weight: 600;
 	font-size: 110%;
 }
 .carousel .carousel-control.left i {
@@ -136,6 +137,12 @@ h2::after {
 }
 .carousel-indicators li {	
 	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-control.right {
+	background-image: none!important;
+}
+.carousel-control.left {
+	background-image: none!important;
 }
 .carousel-indicators li.active {	
 	background: rgba(0, 0, 0, 0.6);

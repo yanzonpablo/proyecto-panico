@@ -23,9 +23,9 @@ const user = {
     const userFound = allUsers.find((oneUser) => oneUser.id === id);
     return userFound;
   },
-  findByField: function name(field, text) {
+  findByField: function name(nombre, text) {
     const allUsers = this.findAll();
-    const userFound = allUsers.find((oneUser) => oneUser[field] === text);
+    const userFound = allUsers.find((oneUser) => oneUser[nombre] === text);
     return userFound;
   },
   create: function (userData) {

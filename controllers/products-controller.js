@@ -7,6 +7,7 @@ const categoriesFilePath = path.join(__dirname, "../data/category.json"); //Path
 const allProducts = db.readJsonDB(productsFilePath);
 const allCategories = db.readJsonDB(categoriesFilePath);
 
+
 module.exports = {
   index: (req, res) => {
     res.render("products-list", {
@@ -50,7 +51,7 @@ module.exports = {
   },
   update: (req, res) => {
     const product =
-      allProducts[allProducts.findIndex((p) => p.id == req.params.id)];
+      allProducts[allProducts.find((p) => p.id == req.params.id)];
 
     product.nombre = req.body.nombre;
     product.precio = req.body.precio;
@@ -60,7 +61,7 @@ module.exports = {
     product.descuento = req.body.descuento;
 
     if (req.file) {
-      const pathAbsolute = path.join(__dirname, "../public", product.imagen);
+      const pathAbsolute = path.join(__dirname, "/images/products", product.imagen);
       fs.unlinkSync(pathAbsolute);
       product.imagen = req.file.filename;
     }
