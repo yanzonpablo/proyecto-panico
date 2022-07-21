@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Detalle de producto</title>
+        <link rel="stylesheet" href="/css/prodejemplo.css">
         <link rel="stylesheet" href="/css/slider.css">
 </head>
 
@@ -15,32 +16,32 @@
             <title>Detalle de producto</title>
     </header>
 
-    <div class="container bootdey">
+    <div class="container-lg">
         <div class="col-lg-12 mw-100">
             <section class="panel">
-                <div class="panel-body mt-30">
+                <div class="panel-body">
                     <div class="col-lg-6">
                         <div class="pro-img-details fx-rap text-center">
-                            <img style="width: 70%" src="/images/products/<%=producto.imagen%>"
+                            <img style="width: 50%" src="/images/products/<%=producto.imagen%>"
                                 alt="<%=producto.nombre%>">
                         </div>
                         <div class="pro-img-list text-center">
                             <a href="#">
-                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
                             </a>
                             <a href="#">
-                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
                             </a>
                             <a href="#">
-                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
                             </a>
                             <a href="#">
-                                <img style="width: 20%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
+                                <img style="width: 80%" src="/images/products/<%=producto.imagen%>" alt="<%=producto.nombre%>">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3 style="margin-top: 30px" class="pro-d-title"><%=producto.nombre%></h4>
+                    <div class="col-md-6 descripcion">
+                        <p style="margin-top: 30px" class="pro-d-title"><%=producto.nombre%></p>
                         <h4 style="margin-top: 30px">Descripción:</h4>
                         <div>
                             <span><%=producto.descripcion%></span></div>
